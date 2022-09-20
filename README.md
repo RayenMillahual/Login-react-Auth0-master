@@ -1,70 +1,7 @@
-# Getting Started with Create React App
+### Login creado con React.js 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  En primer lugar consideré el manejo del state de las alertas del form. Decidí utilizar dos hooks, el useContext en conjunto al useReducer en vistas a que se piensa que el componente Login y NuevaCuenta van a formar parte de un proyecto de mayor envergadura, y el código es más reutilizable y más sencillo acceder a los datos a través de los dispatch action del reducer en todos los componentes que puedan formar parte a futuro. Este mismo procedimiento es aplicable al manejo de la información que requieran del usuario otros futuros componentes. 
+  Dado que no existe una página principal adonde conducir, se prescindieron de los componentes de autentificación de usuario y su conexión con una base de datos. De momento quedaron comentadas las funciones de registrarUsuario e IniciarSesion por la misma razón que explicaba anteriormente con los hooks.
+  Las alertas son introducidas a través de un condicional ternario que evalúa si el state de alerta se encuentra activo o en null. Si cumple las condiciones para estar activo (que algún input del form se encuentre vacío, que el password y su confirmación no sean iguales o que el password sea menor a 6 caracteres, estas últimas dos condiciones activas en el componente de NuevaCuenta), aparecerá un recuadro rojo indicando el error por 5 segundos para luego desaparecer. En caso exitoso, se creó una alerta con un backgroud verde, el cual no estaría en un proyecto en producción, al menos en el login, que se redirigía mediante react-router-dom a la hipotética página principal.
+  Los estilos de página fueron creados en CSS. En caso de ser un proyecto de mayor envergadura, se habría optado por una librería como Materialize, Material-UI, React bootstrap o con Styled components. 
+  

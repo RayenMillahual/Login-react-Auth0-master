@@ -1,27 +1,20 @@
-import { useAuth0 } from "@auth0/auth0-react";
-
-import { LoginButton } from "./Login/Pages/Login";
-import { LogoutButton } from "./Login/Pages/Logout";
-import { Profile } from "./Login/Pages/Profiles";
-import logo from "./Login/Images/Jalmedfactory.png";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./components/Login";
+import NuevaCuenta from "./components/NuevaCuenta";
+import AlertaState from "./context/alertas/alertaState";
 
 function App() {
-  const { isAuthenticated } = useAuth0();
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {isAuthenticated ? (
-          <>
-            <Profile />
-            <LogoutButton />
-          </>
-        ) : (
-          <LoginButton />
-        )}
-      </header>
+      <AlertaState>
+          <Router>
+              <Switch>
+                  <Route exact path="/" component={Login} />
+                  <Route exact path="/nueva-cuenta" component={NuevaCuenta} />
+              </Switch>
+          </Router>
+      </AlertaState>
     </div>
   );
 }
