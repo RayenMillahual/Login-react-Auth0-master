@@ -10,12 +10,12 @@ const Login = () => {
  
 
     const [ usuario, guardarUsuario ] = useState({
-        email: "",
+        username: "",
         password: ""
     });
 
      
-    const { email, password } = usuario;
+    const { username, password } = usuario;
      
 
     const onChange = e => {
@@ -30,7 +30,7 @@ const Login = () => {
         e.preventDefault();
 
         
-        if(email.trim() === "" || password.trim() === "") {
+        if(username.trim() === "" || password.trim() === "") {
             mostrarAlerta("Todos los campos son obligatorios", "alerta-error");
         } else {
             mostrarAlerta("Inicio exitoso", "alerta-ok");
@@ -38,26 +38,26 @@ const Login = () => {
 
         
         //Función para conectar a la página central
-        //iniciarSesion({email, password});
+        //iniciarSesion({username, password});
     };
 
     return ( 
         <div className="form-usuario">
             { alerta ? (<div className={`alerta ${alerta.categoria}`}>{alerta.msg}</div>) : null }
             <div className="contenedor-form sombra-dark">
-                <h1>Iniciar Sesión</h1>
+                <h1>Sign In</h1>
 
                 <form
                     onSubmit={onSubmit}
                 >
                     <div className="campo-form">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="username">username</label>
                         <input 
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Tu Email"
-                            value={email}
+                            type="username"
+                            id="username"
+                            name="username"
+                            placeholder="Tu username"
+                            value={username}
                             onChange={onChange}
                         />
                     </div>
