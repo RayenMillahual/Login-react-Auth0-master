@@ -124,19 +124,20 @@ a {
 .campo-form label {
   flex: 0 0 100px;
   font-family: var(--textFont);
+  border: 1px solid #62c1de;
 }
 .campo-form input[type="password"],
 .campo-form input[type="email"], 
 .campo-form input[type="text"] {
-  border: 1px solid #e1e1e1;
+  border: 1px solid #62c1de;
   padding: 1rem;
   flex: 1;
 }
 
 .sombra-dark {
-  -webkit-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
-  -moz-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
-  box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0px 6px 11px -8px rgba(193, 25, 25, 0.9);
+  -moz-box-shadow: 0px 6px 11px -8px rgba(223, 81, 81, 0.9);
+  box-shadow: 0px 6px 11px -8px rgba(220, 102, 102, 0.9);
 }
 
 .enlace-cuenta {
@@ -168,11 +169,11 @@ a {
 }
 
 .alerta-ok {
-  background-color: rgb(109, 211, 109);
-  color: rgb(2, 103, 2);
+  background-color: rgb(169, 186, 222);
+  color: rgb(169, 186, 222);
 }
 .alerta-error {
-  background-color: rgb(230, 78, 78);
+  background-color: rgb(169, 186, 222);
   color: var(--blanco);
 }
 
@@ -181,9 +182,9 @@ a {
 }
 
 .campo-form > div > label {
-  font-size: 14px;
+  font-size: 40px;
 }
 
 .radio-input {
-  margin-right: 10px;
+  margin-right: 40px;
 }

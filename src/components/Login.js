@@ -45,18 +45,18 @@ const Login = () => {
         <div className="form-usuario">
             { alerta ? (<div className={`alerta ${alerta.categoria}`}>{alerta.msg}</div>) : null }
             <div className="contenedor-form sombra-dark">
-                <h1>Sign In</h1>
+                <h1>Login</h1>
 
                 <form
                     onSubmit={onSubmit}
                 >
                     <div className="campo-form">
-                        <label htmlFor="username">username</label>
+                        <label htmlFor="username">Username</label>
                         <input 
                             type="username"
                             id="username"
                             name="username"
-                            placeholder="Tu username"
+                            placeholder="Username"
                             value={username}
                             onChange={onChange}
                         />
@@ -68,18 +68,18 @@ const Login = () => {
                             id="password"
                             name="password"
                             value={password}
-                            placeholder="Tu Password"
+                            placeholder="Password"
                             onChange={onChange}
                         />
                     </div>
 
                     <div className="campo-form">
-                        <input type="submit" className="btn btn-primario btn-block" value="Iniciar Sesión" />
+                        <input type="submit" className="btn btn-primario btn-block" value="SignIn" />
                     </div>
                 </form>
 
-                <Link to={"/nueva-cuenta"} className="enlace-cuenta">
-                    Obtener Cuenta
+                <Link to={"/forgot"} className="forgot">
+                    Forgot Password?
                 </Link>
             </div>
         </div>
