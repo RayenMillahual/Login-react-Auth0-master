@@ -2,8 +2,7 @@
   --blanco: #ffffff;
   --gris1: #edf2f6;
   --gris2: #2f3848;
-  --gris3: #1a202d;
-  --negro: #000000;
+  --gris3:rgb(90, 184, 184);
   --headingFont:'Raleway', sans-serif;
   --textFont:  'Roboto', sans-serif;
 }
@@ -31,7 +30,7 @@ h1, h2 {
   font-weight: 900;
   margin: 0 0 4rem 0;
   text-align: center;
-  color: var(--gris2);
+  color: aqua;
 }
 h1 span {
   font-weight: 400;
@@ -44,7 +43,7 @@ h2 {
 }
 a {
   text-decoration: none;
-  color: var(--gris2);
+  color: aqua;
 }
 
 /** BOTONES **/
@@ -56,48 +55,49 @@ a {
   font-weight: 400;
   border-radius: .5rem;
   border: none;
-  transition: background-color .3s ease;
+  transition: color .3s ease;
+  color: aqua;
 }
 .btn:hover {
   cursor: pointer;
 }
 .btn-primario {
-  background-color: var(--gris2);
+  background-color: aqua;
   color: var(--blanco);
 }
 .btn-primario:hover {
-  background: var(--gris3);
+  background: aqua;;
 }
 .btn-secundario {
-  background-color: var(--gris1);
+  background-color: aqua;;
 }
 .btn-block {
   display: block;
   width: 100%;
 }
 .btn-submit:hover {
-  background-color: var(--gris2);
+  background-color: aqua;
 }
 .btn-blank {
   margin: 0;
   padding: 0;
   display: block;
-  background-color: transparent;
+  background-color: aqua;
 }
 
 .btn-eliminar {
-  background-color: var(--blanco);
+  background-color: aqua;
   font-size: 1.6rem;
   font-weight: 500;
   display: block;
 }
 
 .cerrar-sesion {
-  color: var(--blanco);
+  color: aqua;
 }
 
 .form-usuario {
-    background-color: var(--gris2);
+    background-color: rgb(255, 255, 255);
     height: 100vh;
     min-height: 800px;
     display: flex;
@@ -115,7 +115,6 @@ a {
 
 .campo-form {
     display: flex;
-    margin-bottom: 2rem;
     align-items: center;
 }
 .campo-form:last-of-type {
@@ -124,20 +123,20 @@ a {
 .campo-form label {
   flex: 0 0 100px;
   font-family: var(--textFont);
-  border: 1px solid #62c1de;
+  color: aqua;
 }
 .campo-form input[type="password"],
-.campo-form input[type="email"], 
+.campo-form input[type="username"],
 .campo-form input[type="text"] {
-  border: 1px solid #62c1de;
+  border: 1px solid aquamarine;
   padding: 1rem;
   flex: 1;
 }
 
 .sombra-dark {
-  -webkit-box-shadow: 0px 6px 11px -8px rgba(193, 25, 25, 0.9);
-  -moz-box-shadow: 0px 6px 11px -8px rgba(223, 81, 81, 0.9);
-  box-shadow: 0px 6px 11px -8px rgba(220, 102, 102, 0.9);
+  -webkit-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+  box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
 }
 
 .enlace-cuenta {
@@ -169,12 +168,11 @@ a {
 }
 
 .alerta-ok {
-  background-color: rgb(169, 186, 222);
-  color: rgb(169, 186, 222);
+  color: aqua;
 }
 .alerta-error {
-  background-color: rgb(169, 186, 222);
-  color: var(--blanco);
+  background-color: rgb(230, 78, 78);
+  color: aqua;
 }
 
 .first-radio-button {
@@ -182,9 +180,9 @@ a {
 }
 
 .campo-form > div > label {
-  font-size: 40px;
+  font-size: 14px;
 }
 
 .radio-input {
-  margin-right: 40px;
+  margin-right: 10px;
 }
