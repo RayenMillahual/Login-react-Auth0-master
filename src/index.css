@@ -26,11 +26,10 @@ body {
 
 
 h1, h2 {
-  font-family: var(--headingFont);
-  font-weight: 900;
-  margin: 0 0 4rem 0;
+   margin: 0;
+  padding: 0 0 20px;
   text-align: center;
-  color: aqua;
+  font-size: 22px;
 }
 h1 span {
   font-weight: 400;
@@ -63,7 +62,8 @@ a {
 }
 .btn-primario {
   background-color: aqua;
-  color: var(--blanco);
+  color:white;
+  border-radius:48%;
 }
 .btn-primario:hover {
   background: aqua;;
@@ -116,6 +116,8 @@ a {
 .campo-form {
     display: flex;
     align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .campo-form:last-of-type {
   margin: 0;
@@ -143,6 +145,7 @@ a {
   margin-top: 2rem;
   display: block;
   opacity: .7;
+  color: black;
 }
 
 .alerta {

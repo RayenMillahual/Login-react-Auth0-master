@@ -74,12 +74,12 @@ const Login = () => {
                     </div>
 
                     <div className="campo-form">
-                        <input type="submit" className="btn btn-primario btn-block" value="SignIn" />
+                        <input type="submit" className="btn btn-primario btn-block" value="Sign In" />
                     </div>
                 </form>
 
-                <Link to={"/forgot"} className="forgot">
-                    Forgot Password?
+                <Link to={"/nueva-cuenta"} className="enlace-cuenta">
+                    Obtener Cuenta
                 </Link>
             </div>
         </div>
